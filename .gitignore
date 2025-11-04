@@ -1,0 +1,6 @@
+# Python cache and data files
+__pycache__/
+*.pyc
+*.pyo
+balloon_data/
+.cdsapirc
