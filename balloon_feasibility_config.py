@@ -12,19 +12,18 @@ CRUISE_ALTITUDE = 3000  # meters (default, will be calculated from cruise time a
 WIND_THRESHOLD = 2.0  # m/s at 100m altitude
 WIND_REFERENCE_HEIGHT = 100  # meters
 
-# Geographic bounds for continental USA
-USA_BOUNDS = {
-    'lat_min': 25.0,
-    'lat_max': 49.0,
-    'lon_min': -125.0,
-    'lon_max': -66.0
+# Geographic bounds for Iberian Peninsula (Spain + Portugal)
+IBERIA_BOUNDS = {
+    'lat_min': 36.0,   # Southern Spain (Tarifa area)
+    'lat_max': 44.0,   # Northern Spain (Galicia/Basque Country)
+    'lon_min': -10.0,  # Western Portugal (Atlantic coast)
+    'lon_max': 3.5     # Eastern Spain (Mediterranean coast)
 }
 
 # Grid resolution (degrees)
-# This will create approximately 2400 grid points for USA (60x40)
-# For 20,000 points globally, use ~0.9 degree resolution
-# For USA with similar density, we'll use 0.5 degree resolution (~120x48 = 5760 points)
-GRID_RESOLUTION = 0.5  # degrees
+# For Iberian Peninsula: 0.5 degree resolution creates ~16x27 = 432 grid points
+# This is much smaller than USA, so analysis will be faster
+GRID_RESOLUTION = 0.5  # degrees (~50km)
 
 # Pressure levels to download (hPa/mb)
 # We need multiple levels to capture wind profile from surface to cruise altitude
@@ -46,9 +45,9 @@ PRESSURE_LEVELS = [
 
 # Time parameters
 YEAR = 2024
-# We'll start with a subset of days for testing, then expand
+# Start with one month for testing, then expand to full year
 START_MONTH = 1
-END_MONTH = 12
+END_MONTH = 1  # Set to 12 for full year analysis
 
 # Data directory
 DATA_DIR = './balloon_data'

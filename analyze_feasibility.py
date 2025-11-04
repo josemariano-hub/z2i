@@ -38,10 +38,10 @@ class FeasibilityAnalyzer:
         """Create geographic grid for analysis"""
         print("Creating geographic grid...")
 
-        lat_min = self.config.USA_BOUNDS['lat_min']
-        lat_max = self.config.USA_BOUNDS['lat_max']
-        lon_min = self.config.USA_BOUNDS['lon_min']
-        lon_max = self.config.USA_BOUNDS['lon_max']
+        lat_min = self.config.IBERIA_BOUNDS['lat_min']
+        lat_max = self.config.IBERIA_BOUNDS['lat_max']
+        lon_min = self.config.IBERIA_BOUNDS['lon_min']
+        lon_max = self.config.IBERIA_BOUNDS['lon_max']
         resolution = self.config.GRID_RESOLUTION
 
         self.grid_lats = np.arange(lat_min, lat_max + resolution, resolution)
@@ -400,10 +400,10 @@ class FeasibilityAnalyzer:
 
         # Set map extent
         ax.set_extent([
-            self.config.USA_BOUNDS['lon_min'],
-            self.config.USA_BOUNDS['lon_max'],
-            self.config.USA_BOUNDS['lat_min'],
-            self.config.USA_BOUNDS['lat_max']
+            self.config.IBERIA_BOUNDS['lon_min'],
+            self.config.IBERIA_BOUNDS['lon_max'],
+            self.config.IBERIA_BOUNDS['lat_min'],
+            self.config.IBERIA_BOUNDS['lat_max']
         ], crs=ccrs.PlateCarree())
 
         # Add map features
@@ -435,7 +435,7 @@ class FeasibilityAnalyzer:
 
         # Title
         plt.title(
-            f'Balloon Launch Feasibility - USA {self.config.YEAR}\n'
+            f'Balloon Launch Feasibility - Iberian Peninsula {self.config.YEAR}\n'
             f'Ascent: {self.config.ASCENT_SPEED}m/s, Descent: {self.config.DESCENT_SPEED}m/s, '
             f'Cruise: {self.config.CRUISE_TIME}h, Wind threshold: {self.config.WIND_THRESHOLD}m/s',
             fontsize=14, pad=20

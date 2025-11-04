@@ -50,7 +50,7 @@ def download_era5_monthly_data(year, month):
 
     print(f"\nDownloading ERA5 data for {year}-{month:02d}...")
     print(f"Pressure levels: {config.PRESSURE_LEVELS}")
-    print(f"Geographic bounds: {config.USA_BOUNDS}")
+    print(f"Geographic bounds: {config.IBERIA_BOUNDS}")
 
     try:
         c.retrieve(
@@ -68,10 +68,10 @@ def download_era5_monthly_data(year, month):
                 'day': days,
                 'time': hours,
                 'area': [  # North, West, South, East
-                    config.USA_BOUNDS['lat_max'],
-                    config.USA_BOUNDS['lon_min'],
-                    config.USA_BOUNDS['lat_min'],
-                    config.USA_BOUNDS['lon_max'],
+                    config.IBERIA_BOUNDS['lat_max'],
+                    config.IBERIA_BOUNDS['lon_min'],
+                    config.IBERIA_BOUNDS['lat_min'],
+                    config.IBERIA_BOUNDS['lon_max'],
                 ],
                 'format': 'netcdf',
             },
@@ -131,10 +131,10 @@ def download_era5_surface_data(year, month):
                 'day': days,
                 'time': hours,
                 'area': [  # North, West, South, East
-                    config.USA_BOUNDS['lat_max'],
-                    config.USA_BOUNDS['lon_min'],
-                    config.USA_BOUNDS['lat_min'],
-                    config.USA_BOUNDS['lon_max'],
+                    config.IBERIA_BOUNDS['lat_max'],
+                    config.IBERIA_BOUNDS['lon_min'],
+                    config.IBERIA_BOUNDS['lat_min'],
+                    config.IBERIA_BOUNDS['lon_max'],
                 ],
                 'format': 'netcdf',
             },
@@ -156,7 +156,7 @@ def download_all_data():
     print(f"ERA5 Data Download for {config.YEAR}")
     print(f"{'='*60}")
     print(f"Months: {config.START_MONTH} to {config.END_MONTH}")
-    print(f"Region: Continental USA")
+    print(f"Region: Iberian Peninsula (Spain + Portugal)")
     print(f"Data will be saved to: {config.DATA_DIR}")
     print(f"{'='*60}\n")
 
