@@ -52,6 +52,14 @@ T700_SFC = 0.2  # kg/kWh - specific fuel consumption
 GENERATOR_EFFICIENCY = 0.95
 KEROSENE_DENSITY = 0.804  # kg/L
 
+# Hydrogen fuel cell properties (automotive tech: Toyota Mirai, Hyundai Nexo)
+FC_POWER_DENSITY = 2.0  # kW/kg - stack + cooling + power electronics
+FC_EFFICIENCY = 0.60  # 60% electrical efficiency (DC output)
+H2_LHV = 33.3  # kWh/kg - lower heating value of hydrogen
+H2_TANK_GRAVIMETRIC = 0.055  # kg H2 / kg total (700 bar Type IV composite tanks)
+# This means for 1 kg of usable H2, you need ~18 kg of tank
+H2_EFFECTIVE_ENERGY_DENSITY = H2_LHV * FC_EFFICIENCY * H2_TANK_GRAVIMETRIC  # ~110 Wh/kg
+
 
 # ============================================================================
 # SCALING RELATIONSHIPS
@@ -317,6 +325,58 @@ def size_turbine_system(power_W: float, num_engines: int = 1) -> Dict[str, float
     }
 
 
+def size_fuel_cell_system(power_W: float, endurance_hours: float) -> Dict[str, float]:
+    """
+    Size hydrogen fuel cell system using automotive technology.
+
+    Based on proven automotive fuel cells (Toyota Mirai, Hyundai Nexo) and
+    700 bar compressed hydrogen storage in Type IV composite tanks.
+
+    Args:
+        power_W: Total electrical power consumption (W)
+        endurance_hours: Desired flight time (hours)
+
+    Returns:
+        Dictionary with fuel cell system specs
+    """
+    power_kW = power_W / 1000
+
+    # Fuel cell stack weight (includes cooling, power electronics)
+    fc_stack_weight_kg = power_kW / FC_POWER_DENSITY
+
+    # Energy required
+    energy_required_Wh = power_W * endurance_hours
+
+    # Hydrogen required (accounting for FC efficiency)
+    h2_energy_required_kWh = energy_required_Wh / 1000 / FC_EFFICIENCY
+    h2_mass_kg = h2_energy_required_kWh / H2_LHV
+
+    # Tank weight (700 bar Type IV composite)
+    # Gravimetric efficiency is kg H2 / kg total, so:
+    tank_total_weight_kg = h2_mass_kg / H2_TANK_GRAVIMETRIC
+    h2_fuel_weight_kg = h2_mass_kg
+    tank_weight_kg = tank_total_weight_kg - h2_fuel_weight_kg
+
+    # Balance of plant (BOP): humidifier, air compressor, valves, etc.
+    # Typically 20-30% of stack weight
+    bop_weight_kg = fc_stack_weight_kg * 0.25
+
+    # Total system weight
+    system_weight_kg = fc_stack_weight_kg + tank_weight_kg + bop_weight_kg
+
+    return {
+        'power_kW': power_kW,
+        'fc_stack_weight_kg': fc_stack_weight_kg,
+        'tank_weight_kg': tank_weight_kg,
+        'bop_weight_kg': bop_weight_kg,
+        'system_weight_kg': system_weight_kg,
+        'h2_fuel_kg': h2_fuel_weight_kg,
+        'h2_tank_pressure_bar': 700,
+        'effective_energy_density_Wh_kg': H2_EFFECTIVE_ENERGY_DENSITY,
+        'fc_efficiency': FC_EFFICIENCY
+    }
+
+
 # ============================================================================
 # COMPLETE HELISTAT DESIGN
 # ============================================================================
@@ -329,16 +389,26 @@ class HelistatDesign:
     num_rotors: int = 4
     target_endurance_hours: float = 2.0
     use_lisulfur: bool = True  # For small electric systems
+    use_fuel_cell: bool = False  # For medium scale (100-1000 kg)
     use_turbine: bool = False  # For large hybrid systems
 
     def __post_init__(self):
         """Calculate all derived parameters"""
         # Determine propulsion type based on size
         if self.mtow_kg < 100:
+            # Small scale: Li-S batteries
             self.use_turbine = False
+            self.use_fuel_cell = False
             self.use_lisulfur = True
+        elif self.mtow_kg <= 2000:
+            # Medium scale: H2 fuel cells (automotive tech)
+            self.use_turbine = False
+            self.use_fuel_cell = True
+            self.use_lisulfur = False
         else:
+            # Large scale: T700 turbines
             self.use_turbine = True
+            self.use_fuel_cell = False
             self.use_lisulfur = False
 
         # Weight breakdown
@@ -376,6 +446,12 @@ class HelistatDesign:
             self.propulsion_weight_kg = self.propulsion['system_weight_kg']
             # Fuel weight for endurance
             self.fuel_weight_kg = self.propulsion['fuel_flow_kg_hr'] * self.target_endurance_hours
+        elif self.use_fuel_cell:
+            self.propulsion = size_fuel_cell_system(self.total_rotor_power_W,
+                                                   self.target_endurance_hours)
+            self.propulsion_weight_kg = self.propulsion['system_weight_kg']
+            # H2 fuel weight
+            self.fuel_weight_kg = self.propulsion['h2_fuel_kg']
         else:
             self.propulsion = size_battery_system(self.total_rotor_power_W,
                                                   self.target_endurance_hours,
@@ -454,6 +530,19 @@ PROPULSION: Turbine-Electric (T700 engines)
   Fuel flow: {self.propulsion['fuel_flow_kg_hr']:.1f} kg/hr
   Endurance: {self.target_endurance_hours:.1f} hours
   Fuel capacity: {self.fuel_weight_kg:.1f} kg
+"""
+        elif self.use_fuel_cell:
+            report += f"""
+PROPULSION: Hydrogen Fuel Cell (automotive technology)
+  Fuel cell power: {self.propulsion['power_kW']:.2f} kW
+  FC stack weight: {self.propulsion['fc_stack_weight_kg']:.2f} kg
+  H2 tank weight: {self.propulsion['tank_weight_kg']:.2f} kg ({self.propulsion['h2_tank_pressure_bar']} bar)
+  Balance of plant: {self.propulsion['bop_weight_kg']:.2f} kg
+  System weight: {self.propulsion['system_weight_kg']:.2f} kg
+  H2 fuel: {self.propulsion['h2_fuel_kg']:.2f} kg
+  FC efficiency: {self.propulsion['fc_efficiency']*100:.0f}%
+  Effective energy density: {self.propulsion['effective_energy_density_Wh_kg']:.0f} Wh/kg
+  Endurance: {self.target_endurance_hours:.1f} hours
 """
         else:
             report += f"""
