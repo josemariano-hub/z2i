@@ -31,8 +31,9 @@ HELIUM_LIFT_SL = RHO_AIR_SL - RHO_HELIUM_SL  # 1.0465 kg/m³
 # MATERIAL AND COMPONENT PROPERTIES
 # ============================================================================
 
-# Envelope materials
-ENVELOPE_DENSITY = 0.1  # kg/m² - urethane-coated ripstop nylon
+# Envelope materials (scale-dependent)
+ENVELOPE_DENSITY_DYNEEMA = 0.035  # kg/m² - Dyneema ripstop + PU coating (for micro/small scale)
+ENVELOPE_DENSITY_NYLON = 0.1  # kg/m² - urethane-coated ripstop nylon (for large scale)
 
 # Battery properties
 LIPO_ENERGY_DENSITY = 250  # Wh/kg - conventional Li-Po
@@ -74,6 +75,25 @@ def estimate_structural_fraction(mtow_kg: float) -> float:
         return 0.33  # Full scale
 
 
+def get_envelope_material_density(mtow_kg: float) -> float:
+    """
+    Select appropriate envelope material based on vehicle scale.
+
+    Small vehicles (<100 kg) use Dyneema fabric for weight savings.
+    Large vehicles use conventional nylon for cost and durability.
+
+    Args:
+        mtow_kg: Maximum takeoff weight
+
+    Returns:
+        Envelope material density in kg/m²
+    """
+    if mtow_kg < 100:
+        return ENVELOPE_DENSITY_DYNEEMA
+    else:
+        return ENVELOPE_DENSITY_NYLON
+
+
 def estimate_rotor_diameter(mtow_kg: float, num_rotors: int = 4) -> float:
     """
     Estimate rotor diameter based on disk loading and MTOW.
@@ -108,6 +128,7 @@ class ToroidGeometry:
     """Toroidal envelope geometry parameters"""
     major_radius: float  # R - distance from toroid center to tube center (m)
     minor_radius: float  # r - tube cross-section radius (m)
+    envelope_density: float = ENVELOPE_DENSITY_NYLON  # kg/m² - material density
 
     @property
     def volume(self) -> float:
@@ -122,21 +143,31 @@ class ToroidGeometry:
     @property
     def envelope_weight(self) -> float:
         """Weight of envelope material (kg)"""
-        return self.surface_area * ENVELOPE_DENSITY
+        return self.surface_area * self.envelope_density
 
     @property
     def aspect_ratio(self) -> float:
         """R/r - aspect ratio (typically 2-4)"""
         return self.major_radius / self.minor_radius
 
+    @property
+    def material_name(self) -> str:
+        """Return material name based on density"""
+        if self.envelope_density < 0.05:
+            return "Dyneema"
+        else:
+            return "Nylon"
 
-def design_toroid_for_volume(target_volume: float, aspect_ratio: float = 1.9) -> ToroidGeometry:
+
+def design_toroid_for_volume(target_volume: float, aspect_ratio: float = 1.9,
+                             envelope_density: float = ENVELOPE_DENSITY_NYLON) -> ToroidGeometry:
     """
     Design a toroid with specified volume and aspect ratio.
 
     Args:
         target_volume: Desired envelope volume (m³)
         aspect_ratio: R/r ratio (default 1.9 from V4 design)
+        envelope_density: Material density in kg/m²
 
     Returns:
         ToroidGeometry with calculated dimensions
@@ -149,7 +180,7 @@ def design_toroid_for_volume(target_volume: float, aspect_ratio: float = 1.9) ->
     minor_radius = (target_volume / (2 * math.pi**2 * aspect_ratio)) ** (1/3)
     major_radius = aspect_ratio * minor_radius
 
-    return ToroidGeometry(major_radius, minor_radius)
+    return ToroidGeometry(major_radius, minor_radius, envelope_density)
 
 
 # ============================================================================
@@ -321,8 +352,10 @@ class HelistatDesign:
         self.total_helium_volume_m3 = self.buoyant_lift_kg / HELIUM_LIFT_SL
         self.volume_per_toroid_m3 = self.total_helium_volume_m3 / self.num_rotors
 
-        # Toroid design
-        self.toroid = design_toroid_for_volume(self.volume_per_toroid_m3)
+        # Toroid design (with scale-appropriate material)
+        envelope_material_density = get_envelope_material_density(self.mtow_kg)
+        self.toroid = design_toroid_for_volume(self.volume_per_toroid_m3,
+                                               envelope_density=envelope_material_density)
         self.total_envelope_weight_kg = self.toroid.envelope_weight * self.num_rotors
 
         # Net buoyancy (after envelope weight)
@@ -399,6 +432,7 @@ TOROIDAL ENVELOPE (per envelope):
   Minor radius (r): {self.toroid.minor_radius:.3f} m
   Aspect ratio (R/r): {self.toroid.aspect_ratio:.2f}
   Surface area: {self.toroid.surface_area:.2f} m²
+  Material: {self.toroid.material_name} ({self.toroid.envelope_density*1000:.0f} g/m²)
   Weight: {self.toroid.envelope_weight:.2f} kg
 
 TOTAL HELIUM:
