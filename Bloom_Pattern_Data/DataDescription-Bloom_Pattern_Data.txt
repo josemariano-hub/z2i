@@ -1,0 +1,113 @@
+
+This document contains a list of files of the data and their descriptions.
+
+Crease Pattern Diagrams (in .svg format) are created with Sketchup and Inkscape.
+Origami Simulator can be accessed at https://origamisimulator.org/.
+
+Files	------------------------   Descriptions
+
+Bloom_Pattern_Data/
+    DataDescription-Bloom_Pattern_Data.txt	This document
+    README.txt					Introduction & brief summary of all contents
+    Yoshimura Bloom Pattern Computer Program/		A computer program written in Python and executed with Python Launcher (3.9 or above) that generates Yoshimura bloom patterns of the form RH-Y-m.h(1/2)
+        Yoshimura_bloom_pattern_code/	
+	    README.txt		A user manual on how to use this program.
+            execute.py		run this file with Python Launcher to execute the program
+            Bloom_Yoshimura.py	main body of the program (NOTE: you can save the output as a .svg file by editing a line of code at the end of the file)
+            settings.py		a document to enter your preferences.
+            examples/		Example outputs of this computer program.
+                Y6-2 inverted.png
+                Y6-2 panels.png
+                Y18-10.png
+                Y6-2 monochromatic.png
+                Y6-2 points.png
+
+    Bloom Pattern Catalog/	A collection of videos, images, and diagrams of bloom patterns, organized by pattern.
+        W.WY-11/		Supplementary materials of bloom pattern W.WY-11
+            W.WY-11.svg			Crease Pattern diagram
+        RH-W-16.4/		Supplementary materials of bloom pattern RH-W-16.4
+            RH-W-16.4.svg		Crease Pattern diagram
+            RH-W-16.4 Simulation/	Simulations of bloom pattern RH-W-16.4 with the Origami Simulator
+                W16.4 simulation settings.png	screenshot of Origami Simulator
+                W16.4 top.mp4			screen recording of Origami Simulator
+                W16.4 trimetric.mp4		screen recording of Origami Simulator
+                W16.4 side.mp4			screen recording of Origami Simulator
+        R-MW-6/			Supplementary materials of bloom pattern R-MW-6
+            R-MW-6.svg			Crease Pattern diagram
+            R-MW-6.mp4			video clip of paper model
+            R-MW-6 Prototype/		photographs of paper model
+                IMG_1894.png			
+                IMG_1881.png			
+                IMG_1891.png			
+                IMG_1884.png			
+            R-MW-6 Simulation/		Simulations of bloom pattern R-MW-6 with the Origami Simulator
+                MW-6 top.mp4			screen recording of Origami Simulator
+                MW-6 bottom.mp4			screen recording of Origami Simulator		
+                MW-6 side.mp4			screen recording of Origami Simulator
+                MW-6 trimetric.mp4		screen recording of Origami Simulator
+                MW-6 simulation settings.png	screenshot of Origami Simulator
+        RH-W-12.2/		Supplementary materials of bloom pattern RH-W-12.2
+            RH-W-12.2.svg		Crease Pattern diagram
+            W12.2.mp4			video clip of paper model
+            RH-W-12.2 Simulation/	Simulations of bloom pattern RH-W-12.2 with the Origami Simulator
+                W12.2 trimetric.mp4		screen recording of Origami Simulator
+                W12.2 top.mp4			screen recording of Origami Simulator
+                W12.2 simulation settings.png	screenshot of Origami Simulator
+                W12.2 side.mp4			screen recording of Origami Simulator
+        RH-Y-6.2(1/2)/		Supplementary materials of bloom pattern RH-Y-6.2(1/2)
+            Y6.2Cardpaper.mp4		video clip of paper model
+            RH-Y-6.2(1/2).svg		Crease Pattern diagram
+            RH-Y-6.2(1/2) Prototypes/
+                Paper Model/			photographs of paper model
+                    Y6.2_convex-side_2_deployment-process-2).JPG
+                    Y6.2_convex-side_4_(bistable-developed).JPG
+                    Y6.2_concave-side_2_(deployment-process-2).JPG
+                    Y6.2_convex-side_1_deployment-process-1).JPG
+                    Y6.2_convex-side_0_(flat-folded).JPG
+                    Y6.2_concave-side_3_(unrestrainedly-developed).JPG
+                    Y6.2_concave-side_1_(deployment-process-1).JPG
+                    Y6.2_convex-side_3_(unrestrainedly-developed).JPG
+                    Y6.2_concave-side_0_(flat-folded).JPG
+                    Y6.2_convex-side_5_(fully-developed).JPG
+                    Y6.2_concave-side_4_(bistable-developed).JPG
+                Card Paper Model/		photographs of card paper model
+                    Y6.2(card)_convex-side_2_deployment-process-2).JPG
+                    Y6.2(card)_concave-side_0_(flat-folded).JPG
+                    Y6.2(card)_concave-side_2_(deployment-process-2).JPG
+                    Y6.2(card)_concave-side_5_(fully-developed).JPG
+                    Y6.2(card)_convex-side_1_deployment-process-1).JPG
+                    Y6.2(card)_concave-side_1_(deployment-process-1).JPG
+                    Y6.2(card)_convex-side_3_(unrestrainedly-developed).JPG
+                    Y6.2(card)_convex-side_5_(fully-developed).JPG
+                    Y6.2(card)_convex-side_4_(bistable-developed).JPG
+                    Y6.2(card)_concave-side_3_(unrestrainedly-developed).JPG
+                    Y6.2(card)_concave-side_4_(bistable-developed).JPG
+                    Y6.2(card)_convex-side_0_(flat-folded).JPG
+            RH-Y-6.2(1/2) Simulation/				Simulations of bloom pattern RH-Y-6.2(1/2) with the Origami Simulator
+                Y6.2 simulation settings.png				screenshot of Origami Simulator
+                Y6.2 side.mp4						screen recording of Origami Simulator
+                Y6.2 trimetric.mp4					screen recording of Origami Simulator
+                Y6.2 top.mp4						screen recording of Origami Simulator
+        RH-Y-12.6(1/2)/		Supplementary materials of bloom pattern RH-Y-12.6(1/2)
+            RH-Y-12.6(1/2).svg			Crease Pattern diagram
+            RH-Y-12.6(1/2) Simulation/		Simulations of bloom pattern RH-Y-12.6(1/2) with the Origami Simulator
+                Y12.6 simulation settings.png		screenshot of Origami Simulator
+                Y12.6 top.mp4				screen recording of Origami Simulator
+                Y12.6 side.mp4				screen recording of Origami Simulator
+                Y12.6 trimetric.mp4			screen recording of Origami Simulator
+        R-MWC-6/		Supplementary materials of bloom pattern R-MWC-6
+            R-MWC-6.mp4			video clip of paper model
+        R-YW-8/			Supplementary materials of bloom pattern R-YW-8
+            R-YW-8.svg			Crease Pattern diagram
+            R-YW-8 Prototype/		photographs of paper model
+                wyii b.png
+                wyii c.png
+                wyii a.png
+            R-YW-8 Simulation/		Simulations of bloom pattern R-YW-8 with the Origami Simulator
+                YW-8 trimetric.mp4		screen recording of Origami Simulator
+                YW-8 side.mp4			screen recording of Origami Simulator
+                YW-8 top.mp4			screen recording of Origami Simulator
+                YW-8 simulation settings.png	screenshot of Origami Simulator
+        R-MW-5/			Supplementary materials of bloom pattern R-MW-5/
+            R-MW-5 (a).mp4		video clip of paper model
+            R-MW-5 (b).mp4		video clip of paper model
