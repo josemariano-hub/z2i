@@ -83,7 +83,8 @@ print("="*80)
 mylar_thickness_um = 15  # increased from 10
 mylar_density = 1.4  # g/cm³
 aluminum_layer_weight = 0.5  # g/m²
-mylar_weight_per_m2 = (mylar_thickness_um * 1e-6 * 100**2 * mylar_density * 1000 + aluminum_layer_weight)  # g/m²
+# Correct calculation: thickness(μm) × density(g/cm³) + aluminum coating
+mylar_weight_per_m2 = (mylar_thickness_um * mylar_density + aluminum_layer_weight)  # g/m²
 
 mylar_mass = A_balloon * mylar_weight_per_m2 / 1000
 
