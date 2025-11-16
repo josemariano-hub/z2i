@@ -200,6 +200,107 @@ Four toroidal (donut-shaped) envelopes arranged in quadcopter configuration, eac
 
 ---
 
+## Global Funding Strategy: US + European Non-Dilutive Capital
+
+### US Defense Funding (Primary Path): $2-50M
+
+**Small Business Innovation Research (SBIR)**
+- Phase I: $250K (feasibility, 6 months)
+- Phase II: $1-2M (prototype, 24 months)
+- Phase III: $10-30M (production transition)
+
+**Other Transaction Authority (OTA)**
+- Direct awards: $3-5M for specific military applications
+- Faster than traditional contracts
+- Less bureaucracy than traditional procurement
+
+**Total US Defense Potential:** $2-50M over 5 years (non-dilutive)
+
+---
+
+### European Funding Strategy: €170-225M Total Potential
+
+**Phase 1: Early Development (€17.5M, Years 1-3)**
+
+**EIC Accelerator (€17.5M max)**
+- Grant: €2.5M for R&D (70% funding) + demonstrator (50% funding)
+- Equity: €15M optional blended finance
+- Timeline: Apply Year 1 after 1kg demonstrator, deploy Years 2-4
+- Success rate: ~5% (competitive but achievable for breakthrough tech)
+- **Positioning:** "Hybrid Buoyant-Electric Aircraft - 83% cost reduction in aviation logistics"
+
+**Phase 2: Scale-Up & Defense (€30-65M, Years 2-5)**
+
+**European Defense Fund (€20-50M)**
+- Phase 1 studies: €1-3M (military feasibility)
+- Phase 2 development: €20-50M (full-scale prototypes + military trials)
+- Consortium: Partner with Airbus Defence, Leonardo, or Thales
+- Applications: Persistent ISR, tactical logistics, border surveillance
+- **Key advantage:** European sovereignty (reduce US helicopter dependence)
+
+**Horizon Europe Cluster 5 - Sustainable Aviation (€10-15M)**
+- Focus: Zero-emission aircraft technologies
+- Consortium: 3+ partners from 3+ EU countries (university, H2 supplier, aerospace prime)
+- Timeline: Years 3-6
+- **Positioning:** "Zero-Emission Heavy-Lift VTOL Architecture"
+
+**Phase 3: Commercial Demonstration (€30-60M, Years 4-7)**
+
+**Innovation Fund - NER 300 Successor (€30M)**
+- Large-scale commercial demonstration
+- First-of-kind zero-emission heavy-lift operations
+- Requires operational deployment (50+ units)
+- Timeline: Years 5-7
+
+**InvestEU / EIB Loans (€30M)**
+- Manufacturing facility financing
+- Interest rates: 1-3% (vs 8-12% venture debt)
+- Guarantee: Up to 80% of loan covered by EU
+- Repayable, but extremely favorable terms
+
+**Phase 4: Manufacturing Scale (€15-30M, Years 5-8)**
+
+**ERDF Regional Development Funds (€15-20M)**
+- Manufacturing facility in EU cohesion region (Poland, Portugal, Greece, etc.)
+- Up to 45% capital cost coverage
+- Job creation incentives
+- Requires €10-15M private co-investment
+
+**NATO Innovation Fund (€5-25M equity)**
+- Dual-use technologies with defense applications
+- €5-25M equity investment (dilutive, but strategic)
+- Access to NATO procurement pathways
+- Timeline: Years 4-6
+
+---
+
+### Integrated 7-Year Funding Timeline
+
+| Year | US Funding | EU Funding | Total Non-Dilutive | Equity Needed | Cumulative |
+|------|-----------|-----------|-------------------|---------------|-----------|
+| **1** | SBIR I $250K | - | $250K | $250K (seed) | $500K |
+| **2** | SBIR II $1.5M | EIC grant €2.5M ($2.7M) | $4.2M | $1M (Series A) | $5.7M |
+| **3** | OTA $3M | EDF study €2M ($2.2M) | $5.2M | $5M (Series A) | $15.9M |
+| **4** | SBIR III $10M | EDF dev €25M ($27M) + Horizon €5M ($5.4M) | $42.4M | $10M (Series B) | $68.3M |
+| **5** | OTA $15M | EIC equity €15M ($16M) + Horizon €5M ($5.4M) | $36.4M | $20M (Series B) | $124.7M |
+| **6** | Phase III $20M | Innovation Fund €15M ($16M) + EIB loan €15M ($16M) | $52M | $15M (Series C) | $191.7M |
+| **7** | Revenue $5M | ERDF €15M ($16M) + EIB loan €15M ($16M) | $37M | $20M (Series C) | $253.7M |
+| **TOTAL** | **$54M** | **€94M ($101M)** | **$155M** | **$71M** | **$254M** |
+
+**Key Metrics:**
+- **Total non-dilutive funding:** $155M (61% of total capital)
+- **Total equity required:** $71M (28% of total capital)
+- **Revenue contribution:** $28M (11% of total by Year 7)
+- **Estimated founder dilution:** 50-70% over 7 years (retaining 30-50%)
+
+**Strategic Advantages:**
+- Minimal dilution through Years 1-4 (grants + SBIR)
+- Defense contracts provide revenue + flight hours for civil certification
+- European funding creates EU market access and partnerships
+- NATO Innovation Fund provides strategic value beyond capital
+
+---
+
 ## Financial Projections (Heavy-Lift Focus)
 
 ### 20-Ton Helistat Economics
