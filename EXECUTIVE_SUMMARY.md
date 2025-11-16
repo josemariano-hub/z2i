@@ -41,9 +41,34 @@ Four toroidal (donut-shaped) envelopes arranged in quadcopter configuration, eac
 
 ---
 
-## Market Analysis: $12.5B Total Addressable Market
+## Market Analysis: $25.5B Total Addressable Market
 
-### Size Class Opportunities
+### **DEFENSE/MILITARY (Primary Early Market): $15B/year** 🎯
+
+**Defense ISR (Intelligence, Surveillance, Reconnaissance): $8B/year**
+- **Applications:** Persistent surveillance, border security, base perimeter, SIGINT
+- **Advantage vs Gray Eagle UAV:** 10× lower cost ($150K vs $20M), VTOL capability, silent ops
+- **Advantage vs Aerostats:** Tactical mobility (relocatable), no tether vulnerability
+- **Key Value:** $20-60/hr operating cost vs $1,500-3,500/hr for UAVs
+
+**Defense Logistics: $5B/year**
+- **Applications:** FOB resupply, CASEVAC, special operations support, HADR
+- **Advantage vs CH-47 Chinook:** 83% cost savings ($2,000/hr vs $10,000/hr), quiet insertion
+- **Key Value:** $1.55M/year savings per vehicle on daily 2-ton FOB resupply missions
+
+**Defense Special Applications: $2B/year**
+- **Applications:** CBRN response, C-UAS platform, communications relay, mine countermeasures
+- **Advantage:** Safe standoff distance, persistent loiter, unmanned operations
+
+**CRITICAL PATH BENEFIT: Military Airworthiness → Civil Certification**
+- **1-2 years** military certification vs 5-7 years FAA
+- **2,000+ flight hours/year** with 10 military vehicles
+- **De-risks civil certification** with real operational data
+- **SBIR/OTA funding:** $2-50M non-dilutive capital
+
+---
+
+### Commercial Market Opportunities
 
 **Small Scale (1-10 kg): $500M/year**
 - **Target:** Long-endurance surveillance, environmental monitoring
@@ -120,39 +145,58 @@ Four toroidal (donut-shaped) envelopes arranged in quadcopter configuration, eac
 
 ---
 
-### Phase 2: Medium-Scale Fuel Cell (2-3 years, $5M)
+### Phase 2: Military Demo & Airworthiness (2-3 years, $2-10M via SBIR/OTA) 🎯 **DEFENSE-FIRST**
+
+**Funding Sources:**
+- Army SBIR Phase II: $1-2M (ISR application)
+- SOCOM OTA: $3-5M (quiet logistics)
+- Phase III transition: $10-30M (production contract)
 
 **Objectives:**
-- Build 100 kg H2 fuel cell prototype
-- Partner with logistics company for pilot program
-- Demonstrate 80% cost savings on real operations
-- Accumulate flight hours for certification
+- Build 100 kg and 1-ton H2 fuel cell demonstrators
+- Obtain **military airworthiness certificate** (1-2 years vs 5-7 for FAA)
+- Deploy 10 vehicles to military training bases
+- **Accumulate 2,000+ flight hours** in operational environment
+- Demonstrate ISR and logistics missions
 
 **Deliverables:**
-- 100 kg flying vehicle
-- 100+ flight hours
-- Customer pilot program results
-- Economic validation data
+- Military-certified vehicles
+- 2,000+ flight hours (basis for civil certification)
+- Military customer validation
+- Operational reliability data >95%
+- Foreign Military Sales opportunities
 
-**Risk:** MEDIUM - Integrating automotive H2 systems, novel flight envelope
+**Flight Hour Accumulation Plan:**
+- 5 vehicles @ 200 hrs/year (ISR training) = 1,000 hrs/year
+- 3 vehicles @ 150 hrs/year (FOB resupply) = 450 hrs/year
+- 2 vehicles @ 300 hrs/year (base perimeter) = 600 hrs/year
+- **Total: 2,050 flight hours/year**
+
+**Risk:** MEDIUM-LOW - Military risk tolerance higher, SBIR/OTA de-risks capital
 
 ---
 
-### Phase 3: Heavy-Lift Development (5-7 years, $50M)
+### Phase 3: Civil Certification & Commercial Scale (Years 4-7, $50M+)
+
+**Leveraging Military Success:**
+- Submit FAA application using **2,000+ military flight hours** as safety data
+- Demonstrate **proven reliability** from military operations
+- Military airworthiness de-risks novel aircraft category
 
 **Objectives:**
-- Develop 5-20 ton commercial vehicle
-- FAA/EASA certification
-- Establish manufacturing process
-- Launch customer contracts
+- FAA/EASA certification (Special Class or Part 27)
+- Develop 5-20 ton commercial vehicles
+- Establish manufacturing capability (50+ units/year)
+- Launch commercial contracts (construction, mining, logistics)
 
 **Deliverables:**
-- Certified aircraft
-- Production capability
-- Service contracts (construction/mining)
-- Operating manual and training
+- FAA certified aircraft
+- Production facility operational
+- Commercial customer contracts
+- International certifications (EASA, etc.)
+- Foreign Military Sales expansion
 
-**Risk:** HIGH - Certification path unclear, large capital requirement
+**Risk:** MEDIUM (reduced from HIGH due to military flight data)
 
 ---
 
