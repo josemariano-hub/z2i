@@ -7,6 +7,45 @@ This document provides geometrically precise prompts for generating marketing ma
 
 ---
 
+## ⚠️ CRITICAL CONFIGURATION CONCEPT ⚠️
+
+**THIS IS A QUADCOPTER DRONE WITH ROTORS INSIDE VERTICAL DONUTS - NOT WHEELS ON A VEHICLE**
+
+Think: **DJI Mavic drone, but each propeller is surrounded by a giant standing donut filled with helium**
+
+### Configuration Overview:
+```
+         TOP VIEW (Looking Down):
+
+    [Toroid 1]     ←26.16m→    [Toroid 2]
+        ⊕                          ⊕
+        ↑                          ↑
+        |                          |
+      Rotor 1                   Rotor 2
+        |                          |
+        |         PAYLOAD          |
+        |           POD            |
+        |                          |
+      Rotor 3                   Rotor 4
+        |                          |
+        ↓                          ↓
+        ⊕                          ⊕
+    [Toroid 3]                 [Toroid 4]
+
+    ⊕ = Rotor (vertical shaft, horizontal spinning blades)
+    [Toroid] = Donut standing UPRIGHT (vertical orientation)
+```
+
+**Key Points:**
+1. **Quadcopter Configuration:** Four rotors in square pattern like any DJI drone
+2. **Vertical Rotors:** Rotor shafts point UP (vertical), blades spin horizontally
+3. **Toroids Stand Upright:** Donuts are VERTICAL (standing on edge), NOT horizontal like car tires
+4. **Rotor Through Center:** Each rotor shaft passes UP through the donut hole of its toroid
+5. **View from Side:** You see the donut profile (circular cross-section), rotor spinning inside hole
+6. **View from Above:** You see four donuts in square pattern, each with rotor blades visible at center
+
+---
+
 ## GEOMETRIC SPECIFICATIONS BY SIZE CLASS
 
 ### 20-Ton Heavy Cargo Helistat (Primary Reference)
@@ -81,7 +120,7 @@ This document provides geometrically precise prompts for generating marketing ma
 
 **Prompt:**
 ```
-Cinematic aerial shot revealing a 20-ton V4 Helistat in flight at golden hour. Camera begins 100m distant, orbits clockwise around vehicle showing complete configuration. Four identical toroidal helium envelopes, each 8.875m major radius × 4.671m minor radius, arranged in precise 35.5m × 35.5m square pattern. Envelopes are metallic silver (#C0C0C0) urethane-coated ripstop nylon with semi-gloss finish and visible seam grid pattern at 2m intervals. Each envelope has 4-blade carbon fiber rotor (7.14m diameter, matte black #1C1C1C blades) passing vertically through its center, spinning at 350 RPM. Carbon fiber structural frame (#2C2C2C matte graphite, 150mm diameter tubes) connects toroids in square grid pattern. White aluminum payload pod (4.0m × 2.5m × 2.0m, #F5F5F5) suspended 2m below center with four telescoping landing legs (1.5m length). Vehicle hovers 50m above construction site with 11-ton cargo container suspended 10m below on steel cables. Rotors occupy 80% of toroid hole diameter. Slight translucency in envelope fabric reveals internal catenary curtains. Smooth 360° orbit, dramatic god rays through clouds, ultra-realistic 4K. Text overlay at 25 seconds: "V4 HELISTAT - 11.6 TON PAYLOAD" in clean sans-serif white font.
+Cinematic aerial shot revealing a 20-ton V4 Helistat in flight at golden hour - THIS IS A QUADCOPTER DRONE CONFIGURATION with four rotors surrounded by giant vertical donut-shaped helium envelopes (like DJI drone but each propeller inside a standing donut). Camera begins 100m distant, orbits clockwise showing complete configuration. CONFIGURATION: Four vertical rotor shafts arranged in square pattern (35.5m × 35.5m spacing, quadcopter X layout), each rotor shaft passes UPWARD through center hole of a toroidal envelope standing UPRIGHT (vertical orientation, NOT horizontal like wheels). TOROIDS: Four identical donut-shaped helium envelopes standing vertical (8.875m major radius, 4.671m minor radius, silver metallic #C0C0C0 urethane-coated ripstop nylon, semi-gloss finish, visible seam grid at 2m intervals). From side view: circular toroid cross-section visible with rotor blades spinning inside center hole. From top view: four donuts in square pattern with rotor blades visible at center of each. ROTORS: Four 7.14m diameter propellers (4-blade carbon fiber, matte black #1C1C1C), rotor shafts vertical pointing upward, blades spin horizontally at 350 RPM generating downward thrust through toroid center holes. STRUCTURE: Matte graphite carbon fiber tubes (150mm diameter, #2C2C2C) connect the four toroids in square grid pattern between the rotors. PAYLOAD: White aluminum pod (4.0m × 2.5m × 2.0m, #F5F5F5) suspended 2m below center of quadcopter frame, four telescoping landing legs (1.5m extended). Vehicle hovers 50m altitude above construction site, 11-ton shipping container suspended 10m below on steel cargo cables. Rotors occupy 80% of toroid hole diameter leaving visible gap. Envelope fabric has slight translucency revealing internal catenary curtains. Camera orbit smooth 360°, dramatic god rays through clouds, golden hour lighting (3500K color temp), ultra-realistic 4K. Text overlay at 25 seconds: "V4 HELISTAT - 11.6 TON PAYLOAD" in clean sans-serif white font. CRITICAL: This looks like a giant quadcopter drone with each propeller surrounded by a standing donut, NOT like wheels on a vehicle.
 ```
 
 **Usage:** Website hero, investor pitch opening, trade show display
@@ -92,7 +131,7 @@ Cinematic aerial shot revealing a 20-ton V4 Helistat in flight at golden hour. C
 
 **Prompt:**
 ```
-Technical animation sequence of 1-ton helistat (13.1m × 13.1m footprint, 3.4m height) complete mission cycle on white background with floating dimension annotations. [0:00-0:10] Vehicle on ground, four silver nylon toroids (R=3.27m, r=1.72m each) deflated and folded flat, showing 2.5m × 2.5m × 0.8m compact storage profile. [0:10-0:20] Time-lapse inflation: helium flows through fill valves, envelopes expand from flat to full toroidal geometry in 8 minutes (compressed to 10 seconds). Blue translucent helium gas visible inside, pressure annotations show "1.05 bar internal pressure". [0:20-0:30] Four 1.60m diameter rotors (4 carbon fiber blades each) spin up from 0 to 400 RPM with visible thrust vector arrows showing 250kg total thrust (200kg from four rotors, 800kg from buoyancy). [0:30-0:35] Smooth vertical takeoff, altitude gauge shows 0→50m. [0:35-0:40] Forward flight at 65 km/h, airflow streamlines in blue showing laminar flow over toroid surfaces, Reynolds number Re=2.8×10^6 annotation. [0:40-0:43] Precision hover, cargo hook lowers 436kg container to ground. [0:43-0:45] Deflation sequence reverses inflation. Clean technical blueprint aesthetic, white background, floating specifications in Helvetica font (rotor diameter, toroid volume 764.5 m³, power 43.2 kW), photorealistic rendering with CAD overlay graphics.
+Technical animation sequence of 1-ton helistat complete mission cycle on white background - QUADCOPTER DRONE CONFIGURATION with vertical rotors inside standing donuts. Dimensions: 13.1m × 13.1m footprint (rotor spacing), 3.4m height. [0:00-0:10] GROUND STATE: Four silver nylon toroids (R=3.27m, r=1.72m each) deflated and folded flat on ground, four vertical rotor shafts (1.60m diameter propellers) collapsed alongside, compact 2.5m × 2.5m × 0.8m storage footprint. [0:10-0:20] INFLATION SEQUENCE: Time-lapse showing helium flowing through fill valves, four toroids expand from flat fabric to full standing donut shape (8 min compressed to 10 sec). Toroids rise to VERTICAL orientation (standing upright like donuts on edge), each forming circular tube. Blue translucent helium gas visible filling interior, pressure gauge overlay "1.05 bar". Rotor shafts extend vertically UPWARD, each shaft threading through center hole of its now-standing toroid. [0:20-0:30] ROTOR SPIN-UP: Four 1.60m propellers (4-blade carbon fiber) spin up 0→400 RPM, blades rotating horizontally inside toroid center holes. Thrust vector arrows show downward airflow through donut holes: 200kg rotor thrust + 800kg buoyancy lift = 1,000kg total. Quadcopter frame (carbon fiber tubes connecting four toroid bases) visible. [0:30-0:35] VERTICAL TAKEOFF: Quadcopter configuration lifts smoothly, altitude gauge 0→50m. View clearly shows four vertical donuts in square pattern with propellers spinning inside each center hole. [0:35-0:40] FORWARD FLIGHT: 65 km/h cruise, airflow streamlines (blue) show laminar flow over toroid outer surfaces, Reynolds Re=2.8×10^6 annotation. Side view clearly shows toroid circular cross-sections (vertical donuts) with rotors inside. [0:40-0:43] PRECISION HOVER: Cargo hook lowers 436kg container from central payload pod. [0:43-0:45] DEFLATION: Reverse sequence, toroids deflate back to flat. Clean technical blueprint aesthetic, white background, floating specs in Helvetica (rotor diameter, toroid volume 764.5 m³, power 43.2 kW), photorealistic with CAD overlay. CRITICAL: Show this as quadcopter drone with vertical rotor shafts passing UP through standing donut holes, NOT horizontal wheel configuration.
 ```
 
 **Usage:** Technical presentations, training materials, certification documentation
@@ -173,7 +212,7 @@ Nature documentary cinematography: Pristine old-growth forest canopy (Pacific No
 
 **Prompt:**
 ```
-Technical cutaway illustration of 20-ton V4 Helistat, isometric view 30° elevation. Four toroidal envelopes (R=8.875m major radius, r=4.671m minor radius each, arranged 35.5m × 35.5m square pattern) with front-right toroid rendered 50% transparent revealing internal structure: helium gas shown as translucent pale blue (#E6F3FF), internal catenary curtain baffles (ripstop nylon fabric panels every 2m creating 28 compartments per toroid), pressure sensors (15 units per toroid, small black boxes 0.05m cube), and circumferential load tapes (12 per toroid, white webbing 50mm wide). Opaque envelopes show exterior: silver nylon (#C0C0C0) with visible seam welding lines creating 2m × 2m panel grid, subtle wrinkle texture, semi-gloss finish. Four rotors (7.14m diameter, four-blade carbon fiber design, blade chord 0.35m, black #1C1C1C) shown in exploded view 1m offset from operational position, with electric motor assemblies visible (0.5m diameter cylindrical housings, brushless DC, 216 kW each). Central structural frame: matte graphite carbon fiber tubes (#2C2C2C, 150mm diameter, 5mm wall thickness) forming square grid truss connecting toroid attachment points (16 connections total, 4 per toroid). Payload pod (4.0m × 2.5m × 2.0m white aluminum honeycomb composite #F5F5F5) shown in cutaway revealing: T700 turboshaft engine (1.2m × 0.8m × 0.7m, 180kg), 450kW generator (0.6m cylinder), fuel tank (400kg kerosene capacity, 500L), flight computer rack (0.8m height), and cargo bay floor rated 11,646kg. Landing gear: four telescoping aluminum legs (1.5m extended, 0.8m retracted, 150mm diameter, silver anodized #A8A8A8) with hemispherical rubber feet (0.4m diameter). Detailed annotations with leader lines in clean sans-serif font labeling all components with dimensions and specifications. White background, aerospace engineering drawing aesthetic, precise linework, photorealistic materials with slight transparency for cutaway sections, 8K ultra detail. --ar 16:9 --style technical --quality 2
+Technical cutaway illustration of 20-ton V4 Helistat isometric view 30° elevation - CRITICAL: THIS IS QUADCOPTER DRONE CONFIGURATION with four VERTICAL rotor shafts, each passing UPWARD through center hole of a STANDING (vertical) donut-shaped envelope, NOT wheels on vehicle. CONFIGURATION: Four toroidal envelopes standing VERTICAL like donuts on edge (R=8.875m major radius, r=4.671m minor radius each) positioned at corners of square (35.5m × 35.5m rotor spacing, quadcopter X layout). Front-right toroid rendered 50% transparent showing internal structure: helium gas (translucent pale blue #E6F3FF), internal catenary curtain baffles (ripstop nylon panels every 2m, 28 compartments per toroid), pressure sensors (15 units, 0.05m black boxes), circumferential load tapes (12 per toroid, white webbing 50mm). Three opaque toroids show exterior: silver nylon (#C0C0C0), visible seam welding (2m × 2m panel grid), subtle wrinkle texture, semi-gloss finish. ROTORS: Four 7.14m diameter propellers (four-blade carbon fiber, blade chord 0.35m, black #1C1C1C) shown in exploded view 1m offset from operational position where they normally sit INSIDE toroid center holes. Rotor shafts VERTICAL (pointing up), blades horizontal. Electric motor assemblies visible (0.5m diameter cylinders, brushless DC, 216 kW each) at rotor bases. FRAME: Matte graphite carbon fiber tubes (#2C2C2C, 150mm diameter, 5mm wall) forming square quadcopter frame grid connecting four toroid bases (16 attachment points total). SIDE VIEW INSET: Shows toroid circular cross-section (vertical donut profile) with rotor blades spinning horizontally inside center hole, shaft vertical. TOP VIEW INSET: Shows four donuts in square pattern with rotors at centers (quadcopter layout). PAYLOAD: White aluminum honeycomb pod (4.0m × 2.5m × 2.0m, #F5F5F5) cutaway showing T700 turboshaft (1.2m × 0.8m × 0.7m, 180kg), 450kW generator (0.6m cylinder), fuel tank (500L kerosene), flight computer, cargo floor (11,646kg rated). LANDING GEAR: Four telescoping aluminum legs (1.5m extended, 0.8m retracted, 150mm diameter, silver #A8A8A8, hemispherical rubber feet 0.4m). Detailed annotations with leader lines, component dimensions/specs in clean sans-serif. White background, aerospace engineering aesthetic, precise linework, photorealistic with transparency for cutaways, 8K ultra detail. ORIENTATION CRITICAL: Toroids stand VERTICAL (upright donuts), rotor shafts VERTICAL (pointing up), like giant quadcopter drone NOT vehicle with wheels. --ar 16:9 --style technical --quality 2
 ```
 
 ---
@@ -182,7 +221,7 @@ Technical cutaway illustration of 20-ton V4 Helistat, isometric view 30° elevat
 
 **Prompt:**
 ```
-Precision top-down orthographic technical view of 20-ton helistat showing exact geometric configuration. Four toroidal envelopes rendered as blue wireframe mesh (#0066CC lines, 0.1m grid spacing showing toroid surface geometry), each toroid positioned at corners of perfect square: coordinates relative to center origin (0,0) are toroid centers at (+13.08m, +13.08m), (-13.08m, +13.08m), (-13.08m, -13.08m), (+13.08m, -13.08m). Each toroid geometry: major radius R=8.875m (dimension line in red showing center of toroid to center of tube cross-section), minor radius r=4.671m (dimension line in green showing tube cross-section radius). Toroids rendered as nested circles showing tube profile: outer diameter 18.67m, inner hole diameter 0.54m where rotor passes through. Four rotors shown at center of each toroid: 7.14m diameter, four-blade configuration at 90° intervals, blade planform visible (tapered from 0.5m root chord to 0.2m tip chord, slightly twisted airfoil). Blades shown in white (#FFFFFF) for contrast against blue wireframe toroids. Central structural frame: carbon fiber tubes connecting toroids shown as yellow lines (#FFD700, 150mm diameter tubes, straight connections between nearest toroid attachment points forming square grid). Payload pod shown at center as dashed white rectangle (4.0m × 2.5m footprint outline). Overall dimension annotations: "OVERALL SPAN: 35.5m × 35.5m", "TOROID SPACING (center-to-center): 26.16m", "ROTOR DIAMETER: 7.14m", "TOROID MAJOR RADIUS: 8.875m", "TOROID MINOR RADIUS: 4.671m". Grid background at 5m intervals in light gray (#CCCCCC), dark background (#1A1A1A), dimension lines with arrowheads and clear text labels, CAD software aesthetic (SolidWorks/CATIA style), architectural precision, technical drawing standards (ANSI Y14.5). --ar 1:1 --style technical --quality 2
+Precision top-down orthographic technical view (bird's eye view looking DOWN) of 20-ton helistat - QUADCOPTER DRONE CONFIGURATION clearly visible from above, CRITICAL: Four VERTICAL rotors (shafts pointing up toward camera) inside four VERTICAL standing donuts (looking down INTO the donut holes). Four toroidal envelopes rendered as blue wireframe mesh (#0066CC lines, 0.1m grid spacing) showing toroid surface geometry when viewed from above (looking down at standing donuts). Each toroid positioned at corners of perfect square (quadcopter X layout): coordinates relative to center origin (0,0) are toroid centers at (+13.08m, +13.08m), (-13.08m, +13.08m), (-13.08m, -13.08m), (+13.08m, -13.08m). Each toroid from TOP VIEW shows: major radius R=8.875m (red dimension line from toroid center to tube centerline), minor radius r=4.671m (green dimension showing tube thickness). When looking DOWN at vertical standing donut, toroid appears as two concentric circles: outer circle diameter 18.67m (outer edge of donut tube), inner circle diameter 0.54m (center hole where rotor sits). Four rotors visible at center of each toroid hole: 7.14m diameter propellers, four-blade configuration at 90° intervals (quadcopter standard), blade planform showing tapered geometry (0.5m root chord → 0.2m tip chord, twisted airfoil profile). Rotor blades shown in white (#FFFFFF) contrasting against blue wireframe toroids, rotor hubs shown as small circles. QUADCOPTER FRAME: Carbon fiber tubes connecting four toroid bases shown as yellow lines (#FFD700, 150mm diameter), square grid pattern connecting nearest attachment points (like DJI drone arms). PAYLOAD POD: Central white dashed rectangle (4.0m × 2.5m footprint) at quadcopter center. DIMENSION ANNOTATIONS in clean sans-serif: "OVERALL SPAN: 35.5m × 35.5m", "TOROID SPACING (center-to-center): 26.16m", "ROTOR DIAMETER: 7.14m", "TOROID MAJOR RADIUS (R): 8.875m", "TOROID MINOR RADIUS (r): 4.671m", "CONFIGURATION: QUADCOPTER X LAYOUT". Grid background 5m intervals (light gray #CCCCCC), dark background (#1A1A1A), dimension lines with arrowheads, CAD software aesthetic (SolidWorks/CATIA), architectural precision (ANSI Y14.5). ORIENTATION NOTE: "TOP VIEW - Looking down at quadcopter with four vertical donuts, rotors inside holes pointing UP toward camera". --ar 1:1 --style technical --quality 2
 ```
 
 ---
@@ -287,10 +326,13 @@ Dramatic offshore industrial scene: 5-ton V4 Helistat (22.4m × 22.4m × 5.9m) a
 All helistats maintain R/r = 1.9:1 aspect ratio across all size classes
 
 ### Configuration Geometry:
-- Four toroids arranged in perfect square pattern
-- Rotors positioned at center of each toroid hole
-- Rotors occupy 80% of hole diameter (20% clearance margin)
-- Structural frame connects toroids at 4 attachment points each (16 total connections)
+- **QUADCOPTER LAYOUT:** Four toroids arranged in perfect square pattern (like DJI drone layout)
+- **VERTICAL ORIENTATION:** Toroids stand UPRIGHT (vertical, like donuts on edge), NOT horizontal like wheels
+- **ROTOR POSITION:** Each rotor shaft passes VERTICALLY UPWARD through center hole of its toroid
+- **ROTOR SIZE:** Rotors occupy 80% of hole diameter (20% clearance margin for safety)
+- **FRAME:** Structural frame connects toroid bases at 4 attachment points each (16 total connections)
+- **SIDE VIEW:** See circular toroid cross-section (donut profile) with rotor blades inside center hole
+- **TOP VIEW:** See four concentric circles (looking down into standing donuts) with rotors at centers
 
 ---
 
